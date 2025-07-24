@@ -1,0 +1,6 @@
+---
+alwaysApply: true
+---
+project stack is docusaurus (react), typescript, css. 
+
+use library /facebook/docusaurus for docs
