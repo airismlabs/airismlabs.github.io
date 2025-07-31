@@ -13,24 +13,39 @@ export default defineConfig({
 				graph: false
 			})],
 			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			logo: {
+				src: './src/assets/logo-small.svg',
+				replacesTitle: true,
+			},
+			social: [
+				{ icon: 'github', label: 'GitHub', href: 'https://github.com/airismlabs' },
+				{ icon: 'x.com', label: 'X', href: 'https://github.com/airismlabs' }
+			],
+			components: {
+				// Override the default Footer component
+			},
 			sidebar: [
 				{
-					label: 'Guides',
+					label: 'Meet Airism',
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: 'Get Started', slug: 'welcome/get-started' },
+						{ label: 'Why Airism?', slug: 'welcome/why-airism' },
+						{ label: 'Studio', slug: 'welcome/studio' },
+						{ label: 'About Us', slug: 'welcome/about-us' },
+						{ label: 'Contribute', slug: 'welcome/contribute' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'kit',
+					autogenerate: { directory: 'kit' },
 				},
 			],
 			customCss: [
 				// Relative path to your custom CSS file
 				'./src/styles/custom.css',
 			],
+			credits: false,
+			lastUpdated: false,
 		}),
 	],
 });

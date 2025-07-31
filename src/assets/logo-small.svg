@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-icon lucide-cloud">
+  <defs>
+    <!-- Gradient for the stroke -->
+    <linearGradient id="gradient-stroke" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a17ff0" />
+      <stop offset="100%" stop-color="#f779a1" />
+    </linearGradient>
+
+    <!-- Gradient for the fill -->
+    <linearGradient id="gradient-fill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d1d1d1" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+  </defs>
+
+  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"
+    stroke="url(#gradient-stroke)"
+    fill="url(#gradient-fill)" />
+</svg>
