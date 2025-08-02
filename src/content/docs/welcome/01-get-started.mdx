@@ -1,8 +1,31 @@
 ---
-title: getting started
+title: Getting Started
 description: hi
 ---
-
 import OpenAi from '~icons/bi/openai'
+import Anthropic from '~icons/bi/anthropic'
+import Claude from '~icons/bi/claude'
+import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
+import IconLinkCard from "../../../components/IconLinkCard.astro";
 
-<OpenAi color="goldenrod" font-size="3rem" aria-hidden />
+## Kit
+yep
+<CardGrid>
+    <IconLinkCard title="Anthropic" icon="puzzle" href="/kit/claude">
+        <Anthropic font-size="3rem" />
+	</IconLinkCard>
+    <IconLinkCard title="OpenAI" icon="puzzle" href="/kit/chatgpt">
+        <OpenAi  font-size="3rem" />
+	</IconLinkCard>
+</CardGrid>
+
+## Studio
+yup
+<CardGrid>
+    <IconLinkCard title="Claude" icon="puzzle" href="/kit/claude">
+        <Claude font-size="3rem" />
+	</IconLinkCard>
+    <IconLinkCard title="ChatGPT" icon="puzzle" href="/kit/chatgpt">
+        <OpenAi  font-size="3rem" />
+	</IconLinkCard>
+</CardGrid>

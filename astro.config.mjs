@@ -32,8 +32,12 @@ export default defineConfig({
 					autogenerate: { directory: 'welcome' },
 				},
 				{
-					label: 'kit',
+					label: 'Kit',
 					autogenerate: { directory: 'kit' },
+				},
+				{
+					label: 'Studio',
+					autogenerate: { directory: 'Studio' },
 				},
 			],
 			customCss: [
