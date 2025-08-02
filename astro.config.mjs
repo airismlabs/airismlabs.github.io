@@ -2,6 +2,8 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightThemeObsidian from 'starlight-theme-obsidian'
+import Icons from 'unplugin-icons/vite'
+
 
 
 // https://astro.build/config
@@ -27,13 +29,7 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Meet Airism',
-					items: [
-						{ label: 'Get Started', slug: 'welcome/get-started' },
-						{ label: 'Why Airism?', slug: 'welcome/why-airism' },
-						{ label: 'Studio', slug: 'welcome/studio' },
-						{ label: 'About Us', slug: 'welcome/about-us' },
-						{ label: 'Contribute', slug: 'welcome/contribute' },
-					],
+					autogenerate: { directory: 'welcome' },
 				},
 				{
 					label: 'kit',
@@ -48,4 +44,7 @@ export default defineConfig({
 			lastUpdated: false,
 		}),
 	],
+	vite: {
+		plugins: [Icons({ compiler: 'astro' })],
+	},
 });
