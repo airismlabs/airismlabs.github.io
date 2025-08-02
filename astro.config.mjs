@@ -35,10 +35,6 @@ export default defineConfig({
 					label: 'Kit',
 					autogenerate: { directory: 'kit' },
 				},
-				{
-					label: 'Studio',
-					autogenerate: { directory: 'Studio' },
-				},
 			],
 			customCss: [
 				// Relative path to your custom CSS file
