@@ -19,6 +19,14 @@
     backdrop-filter: blur(16px);
 }
 
+[data-has-hero] .page {
+    height: 100%;
+    background:
+            linear-gradient(215deg, var(--sl-hero-color), transparent 40%),
+            radial-gradient(var(--sl-hero-color), transparent 40%) no-repeat -60vw -40vh / 150vw 200vh,
+            radial-gradient(var(--sl-hero-color), transparent 65%) no-repeat 50% calc(100% + 20rem) /
+			150rem 30rem;
+}
 
 [data-has-hero] .hero > img {
     filter: 
@@ -26,7 +34,7 @@
         drop-shadow(0 0 20px rgba(138, 84, 255, 0.6))
         drop-shadow(0 0 40px rgba(138, 84, 255, 0.4))
         drop-shadow(0 0 60px rgba(138, 84, 255, 0.2));
-    animation: bob 2s ease-in-out infinite;
+    animation: bob 3s ease-in-out infinite;
     animation-delay: 0.5s;
 }
 
@@ -36,6 +44,6 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-8px);
+        transform: translateY(-16px);
     }
 }

@@ -18,8 +18,7 @@ hero:
 ---
 
 import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
-
-## Next steps
+import IconCard from "../../components/IconCard.astro";
 
 <CardGrid>
 <div>
@@ -27,14 +26,26 @@ import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
 <p>hello there</p>
 </div>
 <CardGrid>
-	<Card title="Update" icon="pencil">
-	</Card>
-	<Card title="Add" icon="add-document">
-	</Card>
-	<Card title="Configure" icon="setting">
-	</Card>
-	<Card title="Read" icon="open-book">
-	</Card>
+<IconCard title="Claude" icon="anthropic" />
+<IconCard title="ChatGPT" icon="openai" />
+<IconCard title="Gemini" icon="gemini" />
+<IconCard title="Grok" icon="grok" />
 </CardGrid>
 </CardGrid>
 
+<div style={{ height: "8rem" }}></div>
+
+
+<div style={{ textAlign: 'center' }}>
+  <h1>Airism Studio</h1>
+  <h4>Explore LLM data formats</h4>
+</div>
+![](../../assets/studio.jpg)
+<div style={{ textAlign: 'center' }}>
+  <LinkButton href="/welcome/03-studio/">
+    Documentation
+  </LinkButton>
+    <LinkButton href="/demo" variant="secondary">
+    Live Demo
+  </LinkButton>
+</div>

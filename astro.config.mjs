@@ -21,11 +21,8 @@ export default defineConfig({
 			},
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/airismlabs' },
-				{ icon: 'x.com', label: 'X', href: 'https://github.com/airismlabs' }
+				{ icon: 'x.com', label: 'X', href: 'https://x.com/airismlabs' }
 			],
-			components: {
-				// Override the default Footer component
-			},
 			sidebar: [
 				{
 					label: 'Meet Airism',
@@ -35,6 +32,10 @@ export default defineConfig({
 					label: 'Kit',
 					autogenerate: { directory: 'kit' },
 				},
+				{
+					label: 'Studio',
+					autogenerate: { directory: 'studio' },
+				}
 			],
 			customCss: [
 				// Relative path to your custom CSS file
