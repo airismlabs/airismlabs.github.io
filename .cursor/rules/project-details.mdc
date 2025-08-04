@@ -3,3 +3,150 @@ description:
 globs:
 alwaysApply: false
 ---
+the company has 2 products. one is kit, which is a library to parse and organize information from chatgpt and claude exports. the other is studio which is a webapp to visualize and explore the exports. 
+
+---
+
+## 📂 `welcome`
+
+### 📜 01-get-started.mdx
+
+**Title:** Get Started with Airism
+**Contents:**
+
+* Welcome to Airism
+* What is Airism?
+* Overview of Kit and Studio
+* Installation (npm for Kit, link/login for Studio)
+* Quickstart: Convert and visualize a ChatGPT export in under 3 minutes
+* Where to go next: Kit vs Studio
+
+---
+
+### 📜 02-why-airism.mdx
+
+**Title:** Why Airism?
+**Contents:**
+
+* The problem with raw AI exports
+* Common pain points: messy JSON, no cross-session insight, no search
+* Airism’s approach: Parse once, explore endlessly
+* How Kit and Studio work together
+* Open-source, modular, and extensible
+
+---
+
+### 📜 03-studio.mdx
+
+**Title:** Studio Overview
+**Contents:**
+
+* What is Studio?
+* How Studio complements Kit
+* Features:
+
+  * Timeline view of conversations
+  * Search and filter across sessions
+  * Tagging, annotations, and insights
+* Importing: drag-and-drop ChatGPT/Claude `.json` files or use Kit
+* FAQ: Security, cloud vs local, supported formats
+
+---
+
+### 📜 04-about-us.mdx
+
+**Title:** About the Airism Team
+**Contents:**
+
+* Our Mission: Make AI outputs human-readable
+* Meet the team: Researchers, Devs, and Designers
+* Our story: From messy exports to clarity
+* Community values and contributions
+* Contact and support
+
+---
+
+### 📜 05-contribute.mdx
+
+**Title:** Contributing to Airism
+**Contents:**
+
+* How to contribute (docs, code, testing)
+* Repository structure
+* Guidelines (code style, documentation, issue triage)
+* Contributor Covenant Code of Conduct
+* How to suggest features or report bugs
+
+---
+
+## 📂 `kit`
+
+### 📜 chatgpt.mdx
+
+**Title:** Kit: Parsing ChatGPT Exports
+**Contents:**
+
+* Supported export formats (.json from chat.openai.com)
+* Installation: `npm install @airism/kit`
+* Example:
+
+  ```ts
+  import { parseChatGPT } from '@airism/kit'
+
+  const sessions = await parseChatGPT('chatgpt_export.json')
+  console.log(sessions)
+  ```
+* Output structure (Session\[], Message\[], metadata)
+* Handling system messages, threads, timestamps
+* Edge cases and compatibility
+
+---
+
+### 📜 claude.mdx
+
+**Title:** Kit: Parsing Claude Exports
+**Contents:**
+
+* Supported formats (.json, ZIP from Claude.ai)
+* Example usage:
+
+  ```ts
+  import { parseClaude } from '@airism/kit'
+
+  const threads = await parseClaude('claude_export.zip')
+  ```
+* Output structure and normalization
+* Notes on differences from ChatGPT parsing
+* Handling nested replies, file references, formatting quirks
+
+---
+
+## 📂 `studio`
+
+### 📜 chatgpt.mdx
+
+**Title:** Visualizing ChatGPT Data in Studio
+**Contents:**
+
+* Drag-and-drop ChatGPT `.json` export
+* Using Studio’s Timeline and Table views
+* Auto-tagging features for system prompts
+* Linking sessions and finding duplicates
+* Exporting enhanced data (CSV, Markdown, JSON)
+
+---
+
+### 📜 claude.mdx
+
+**Title:** Visualizing Claude Data in Studio
+**Contents:**
+
+* Claude import options (ZIP or individual thread JSONs)
+* Handling custom Claude formatting quirks
+* Interactive navigation: Claude thread explorer
+* Summary view for each Claude conversation
+* Merge and compare across Claude and ChatGPT sessions
+
+---
+
+Would you like me to generate the actual content of any of these `.mdx` files? If so, let me know which one you'd like to start with.

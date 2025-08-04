@@ -1,6 +1,78 @@
 ---
 title: Claude
-description: A guide in my new Starlight docs site.
+description: Parse and normalize Claude conversation exports with Kit
 ---
 
-Anthropic
+## Installation
+
+```bash
+npm install @airism/kit
+```
+
+## Supported Formats
+
+- `.json` files from Claude.ai individual conversations
+- `.zip` archives containing multiple conversations
+- Project-based exports with artifacts
+
+## Basic Usage
+
+```ts
+import { parseClaude } from '@airism/kit'
+
+// Single conversation
+const thread = await parseClaude('claude_conversation.json')
+
+// ZIP archive
+const threads = await parseClaude('claude_export.zip')
+```
+
+## Output Structure
+
+```ts
+interface Thread {
+  id: string
+  name: string
+  created: Date
+  messages: Message[]
+  artifacts?: Artifact[]
+  metadata: ClaudeMetadata
+}
+
+interface Artifact {
+  id: string
+  type: 'code' | 'text' | 'document'
+  content: string
+  language?: string
+}
+```
+
+## Key Differences from ChatGPT
+
+- **Artifacts**: Preserves Claude's artifact system for code and documents
+- **Project Context**: Maintains project-level organization
+- **File References**: Handles uploaded file contexts and references
+- **Nested Replies**: Preserves Claude's conversation branching
+
+## Formatting Quirks
+
+Kit normalizes Claude's unique formatting:
+- Converts thinking blocks to metadata
+- Preserves tool usage context
+- Handles multi-turn artifact iterations
+- Maintains citation and reference links
+
+## Advanced Usage
+
+```ts
+// Extract artifacts separately
+const { threads, artifacts } = await parseClaude('export.zip', {
+  extractArtifacts: true,
+  preserveFormatting: true
+})
+
+// Filter by conversation type
+const codeThreads = threads.filter(t => 
+  t.artifacts?.some(a => a.type === 'code')
+)
+```

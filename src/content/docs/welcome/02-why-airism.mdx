@@ -1,4 +1,99 @@
 ---
 title: Why Airism?
-description: bye
+description: Understand the problems Airism solves and how our approach transforms AI conversation analysis
 ---
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## The Problem with Raw AI Exports
+
+If you've ever tried to work with AI conversation exports, you know the pain:
+
+### Common Pain Points
+
+<CardGrid>
+  <Card title="Messy JSON Structure" icon="warning">
+    Raw exports are nested, inconsistent, and hard to parse. ChatGPT and Claude use completely different formats.
+  </Card>
+  <Card title="No Cross-Session Insight" icon="puzzle">
+    Each conversation exists in isolation. Finding patterns across months of interactions is nearly impossible.
+  </Card>
+  <Card title="Limited Search" icon="magnifier">
+    Basic text search through thousands of messages is slow and inflexible. No semantic understanding.
+  </Card>
+  <Card title="No Metadata" icon="information">
+    Timestamps are inconsistent, system prompts are buried, and conversation context is lost.
+  </Card>
+</CardGrid>
+
+## Airism's Approach: Parse Once, Explore Endlessly
+
+We believe your AI conversations contain valuable insights that shouldn't be locked away in messy export files.
+
+### Our Philosophy
+
+**Normalize First**: Convert all AI exports into a consistent, type-safe format that's easy to work with.
+
+**Preserve Everything**: Maintain full conversation context, metadata, and relationships between messages.
+
+**Enable Exploration**: Provide tools for search, visualization, and analysis that scale from single conversations to massive datasets.
+
+## How Kit and Studio Work Together
+
+### The Perfect Workflow
+
+1. **Extract** → Use Kit to parse raw exports into clean, structured data
+2. **Enhance** → Kit normalizes timestamps, extracts metadata, and identifies conversation patterns  
+3. **Explore** → Studio visualizes your data with timelines, search, and advanced filtering
+4. **Analyze** → Use Studio's insights to understand your AI usage patterns
+5. **Export** → Take enhanced data back to your own tools in multiple formats
+
+### For Different Use Cases
+
+<CardGrid>
+  <Card title="Researchers" icon="star">
+    Analyze conversation patterns, extract themes, and study AI interaction behaviors across large datasets.
+  </Card>
+  <Card title="Teams" icon="heart">
+    Share and collaborate on AI conversations, build knowledge bases from chat histories.
+  </Card>
+  <Card title="Developers" icon="rocket">
+    Build automations, dashboards, and integrations on top of clean, normalized AI data.
+  </Card>
+  <Card title="Power Users" icon="trophy">
+    Search across months of conversations, find forgotten insights, and track your AI journey.
+  </Card>
+</CardGrid>
+
+## Open-Source, Modular, and Extensible
+
+### Why Open Source?
+
+- **Transparency**: See exactly how your data is processed
+- **Security**: Run everything locally if needed
+- **Community**: Benefit from contributions and extensions
+- **Longevity**: Never worry about vendor lock-in
+
+### Modular Design
+
+Airism Kit is built with composability in mind:
+
+```typescript
+// Use just what you need
+import { parseChatGPT, normalizeTimestamps } from '@airism/kit'
+
+// Extend with custom parsers
+import { createCustomParser } from '@airism/kit/extend'
+```
+
+### Growing Ecosystem
+
+While we started with ChatGPT and Claude, our architecture supports:
+
+- **Future AI Platforms**: Easy to add new parsers
+- **Custom Formats**: Build your own parsers with our toolkit
+- **Export Targets**: Multiple output formats for different use cases
+- **Plugin System**: Community extensions for specialized needs
+
+---
+
+**Ready to solve these problems?** Learn about [Studio's features](/welcome/03-studio/) or start with [Kit documentation](/kit/chatgpt/) to parse your first export.

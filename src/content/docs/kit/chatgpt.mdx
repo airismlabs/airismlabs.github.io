@@ -1,6 +1,63 @@
 ---
 title: ChatGPT
-description: A guide in my new Starlight docs site.
+description: Parse and normalize ChatGPT conversation exports with Kit
 ---
 
-OpenAI
+## Installation
+
+```bash
+npm install @airism/kit
+```
+
+## Supported Formats
+
+- `.json` files from chat.openai.com export
+- Individual conversation exports
+- Bulk conversation archives
+
+## Basic Usage
+
+```ts
+import { parseChatGPT } from '@airism/kit'
+
+const sessions = await parseChatGPT('chatgpt_export.json')
+console.log(sessions)
+```
+
+## Output Structure
+
+```ts
+interface Session {
+  id: string
+  title: string
+  created: Date
+  messages: Message[]
+  metadata: ChatGPTMetadata
+}
+
+interface Message {
+  id: string
+  role: 'user' | 'assistant' | 'system'
+  content: string
+  timestamp: Date
+  metadata?: any
+}
+```
+
+## Advanced Features
+
+### System Messages
+Kit automatically identifies and preserves system prompts and custom instructions.
+
+### Thread Handling
+Maintains conversation threading and context across message exchanges.
+
+### Timestamp Normalization
+Converts OpenAI timestamps to standardized Date objects.
+
+## Edge Cases
+
+- Handles incomplete exports gracefully
+- Preserves code blocks and formatting
+- Manages rate-limited or truncated conversations
+- Compatible with both legacy and current export formats

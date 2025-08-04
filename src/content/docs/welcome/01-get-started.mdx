@@ -1,24 +1,90 @@
 ---
-title: Getting Started
-description: hi
+title: Get Started with Airism
+description: Transform your AI conversation exports into organized, searchable data with Airism Kit and Studio
 ---
 import OpenAi from '~icons/simple-icons/openai'
 import Anthropic from '~icons/simple-icons/anthropic'
 import Claude from '~icons/simple-icons/claude'
-import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
+import { Card, CardGrid, LinkButton, Tabs, TabItem } from '@astrojs/starlight/components';
 import IconLinkCard from "../../../components/IconLinkCard.astro";
 
-## Kit
-yep
+## Welcome to Airism
+
+Airism helps you unlock the value hidden in your AI conversation exports. Whether you have months of ChatGPT conversations or detailed Claude discussions, Airism transforms messy export files into organized, searchable, and actionable data.
+
+## What is Airism?
+
+Airism consists of two complementary products:
+
+- **Kit**: A TypeScript library for parsing and normalizing AI conversation exports
+- **Studio**: A web application for visualizing, exploring, and analyzing your conversations
+
+## Overview of Kit and Studio
+
+### Airism Kit
+A type-safe, composable API that transforms raw AI exports into structured data. Perfect for developers building automations, dashboards, or custom analysis tools.
+
+### Airism Studio  
+An intuitive web interface that lets you explore your AI conversations through timeline views, advanced search, tagging, and cross-session insights.
+
+## Installation
+
+<Tabs>
+  <TabItem label="Kit (npm)">
+    ```bash
+    npm install @airism/kit
+    ```
+  </TabItem>
+  <TabItem label="Studio (web)">
+    Visit [studio.airism.dev](https://studio.airism.dev) to get started instantly. No installation required!
+  </TabItem>
+</Tabs>
+
+## Quickstart: Convert and Visualize in Under 3 Minutes
+
+### Step 1: Export Your Data
+- **ChatGPT**: Go to Settings → Data Controls → Export Data
+- **Claude**: Visit claude.ai → Settings → Export Data
+
+### Step 2: Choose Your Path
+
 <CardGrid>
-    <IconLinkCard title="Anthropic" icon="puzzle" href="/kit/claude">
+    <IconLinkCard title="Parse with Kit" icon="code" href="/kit/chatgpt">
+        <OpenAi font-size="3rem" />
+        Transform exports programmatically
+    </IconLinkCard>
+    <IconLinkCard title="Visualize with Studio" icon="open-book" href="/studio/chatgpt">
         <Anthropic font-size="3rem" />
-	</IconLinkCard>
-    <IconLinkCard title="OpenAI" icon="puzzle" href="/kit/chatgpt">
-        <OpenAi  font-size="3rem" />
-	</IconLinkCard>
+        Drag, drop, and explore instantly
+    </IconLinkCard>
 </CardGrid>
 
-## Studio
-yup
-<IconLinkCard title="Get Started" icon="list-format" href="/welcome/03-studio/"></IconLinkCard>
+### Step 3: Explore Your Data
+Use Studio's timeline view to see conversation patterns, search across all sessions, and discover insights you never knew existed in your AI interactions.
+
+## Where to Go Next
+
+### For Developers: Start with Kit
+If you're building integrations, automations, or custom analysis tools:
+
+<CardGrid>
+    <IconLinkCard title="ChatGPT Parsing" icon="puzzle" href="/kit/chatgpt">
+        <OpenAi font-size="3rem" />
+        Parse OpenAI conversation exports
+    </IconLinkCard>
+    <IconLinkCard title="Claude Parsing" icon="puzzle" href="/kit/claude">
+        <Anthropic font-size="3rem" />
+        Handle Anthropic export formats
+    </IconLinkCard>
+</CardGrid>
+
+### For Explorers: Jump into Studio
+If you want to understand your AI usage patterns and find hidden insights:
+
+<IconLinkCard title="Studio Overview" icon="list-format" href="/welcome/03-studio/">
+    Learn about Studio's powerful visualization features
+</IconLinkCard>
+
+---
+
+**Ready to get started?** Check out [Why Airism?](/welcome/02-why-airism/) to understand the problems we solve, or dive straight into the [Studio Overview](/welcome/03-studio/).

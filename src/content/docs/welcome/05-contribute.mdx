@@ -1,4 +1,192 @@
 ---
-title: Contribute
-description: do it
+title: Contributing to Airism
+description: Help us build better tools for AI conversation analysis - from code to docs to community
 ---
+import { Card, CardGrid, LinkButton } from '@astrojs/starlight/components';
+
+## How to Contribute
+
+Airism is built by and for the community. Whether you're a developer, researcher, writer, or just someone with great ideas, there's a way for you to contribute.
+
+### Ways to Get Involved
+
+<CardGrid>
+  <Card title="Code Contributions" icon="rocket">
+    Fix bugs, add features, or build new parsers for AI platforms
+  </Card>
+  <Card title="Documentation" icon="document">
+    Improve guides, write tutorials, or help with translations
+  </Card>
+  <Card title="Testing & QA" icon="approve-check">
+    Test new features, report bugs, or help with compatibility testing
+  </Card>
+  <Card title="Community Support" icon="heart">
+    Help other users, answer questions, or moderate discussions
+  </Card>
+</CardGrid>
+
+## Repository Structure
+
+Airism is organized into several repositories:
+
+### Core Repositories
+
+```
+airismlabs/
+├── kit/                 # TypeScript parsing library
+│   ├── src/parsers/      # Platform-specific parsers
+│   ├── src/types/        # TypeScript definitions
+│   └── src/utils/        # Shared utilities
+├── studio/             # Web application
+│   ├── src/components/   # React components
+│   ├── src/lib/          # Core functionality
+│   └── src/pages/        # Application pages
+└── docs/               # Documentation site (this site)
+    ├── src/content/      # Documentation content
+    └── src/components/   # Doc-specific components
+```
+
+### Getting Started with Development
+
+1. **Fork the repository** you want to contribute to
+2. **Clone your fork** locally
+3. **Install dependencies** with `npm install`
+4. **Create a feature branch** from `main`
+5. **Make your changes** with tests
+6. **Submit a pull request** for review
+
+## Guidelines
+
+### Code Style
+
+We use consistent formatting across all repositories:
+
+- **TypeScript**: Strict mode with comprehensive type definitions
+- **Prettier**: Automatic code formatting (run `npm run format`)
+- **ESLint**: Linting rules for code quality (run `npm run lint`)
+- **Tests**: Required for new features (run `npm test`)
+
+### Commit Messages
+
+We follow [Conventional Commits](https://conventionalcommits.org/):
+
+```bash
+# Good commit messages
+feat(kit): add support for Claude Pro exports
+fix(studio): resolve timeline rendering bug
+docs(readme): update installation instructions
+test(parsers): add edge case tests for ChatGPT format
+```
+
+### Documentation Standards
+
+- **Clear Examples**: Every feature needs working code examples
+- **User-Focused**: Write for the person trying to solve a problem
+- **Keep Updated**: Update docs when changing functionality
+- **Test Instructions**: Verify all examples actually work
+
+### Issue Triage
+
+We use labels to organize issues:
+
+- `bug` - Something isn't working correctly
+- `feature` - New functionality request
+- `docs` - Documentation improvement
+- `good first issue` - Beginner-friendly tasks
+- `help wanted` - Community input needed
+- `parser` - Related to data parsing
+- `studio` - Related to the web application
+- `kit` - Related to the library
+
+## Contributor Covenant Code of Conduct
+
+### Our Pledge
+
+We are committed to making participation in our project a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+
+### Our Standards
+
+**Positive behaviors include:**
+- Using welcoming and inclusive language
+- Being respectful of differing viewpoints and experiences
+- Gracefully accepting constructive criticism
+- Focusing on what is best for the community
+- Showing empathy towards other community members
+
+**Unacceptable behaviors include:**
+- Trolling, insulting/derogatory comments, and personal attacks
+- Public or private harassment
+- Publishing private information without permission
+- Other conduct which could reasonably be considered inappropriate
+
+### Enforcement
+
+Project maintainers have the right to remove, edit, or reject contributions that are not aligned with this Code of Conduct. Report unacceptable behavior to conduct@airism.dev.
+
+## How to Suggest Features or Report Bugs
+
+### Reporting Bugs
+
+Before creating a bug report:
+
+1. **Check existing issues** to avoid duplicates
+2. **Verify the bug** in the latest version
+3. **Gather information** about your environment
+
+Include in your bug report:
+- Clear description of the problem
+- Steps to reproduce the issue
+- Expected vs actual behavior
+- Environment details (OS, browser, etc.)
+- Sample data (if relevant and safe to share)
+
+### Suggesting Features
+
+Feature requests should include:
+- **Problem Description**: What user need does this address?
+- **Proposed Solution**: How should it work?
+- **Use Cases**: Who would benefit and how?
+- **Implementation Ideas**: Any technical considerations?
+
+### Priority and Roadmap
+
+We prioritize based on:
+1. **User Impact**: How many people does this affect?
+2. **Problem Severity**: How painful is the current situation?
+3. **Implementation Effort**: What's the cost/benefit ratio?
+4. **Community Interest**: How much community support exists?
+
+## Recognition and Rewards
+
+### Contributor Recognition
+
+- **Contributors Page**: All contributors are listed on our website
+- **Release Notes**: Significant contributions are highlighted
+- **Swag**: Active contributors receive Airism stickers and shirts
+- **Early Access**: Contributors get early access to new features
+
+### Maintainer Path
+
+Regular contributors can become maintainers by:
+1. **Consistent Contributions**: Regular, quality contributions over time
+2. **Community Involvement**: Helping other users and contributors
+3. **Technical Leadership**: Taking ownership of specific areas
+4. **Project Vision**: Understanding and advancing project goals
+
+---
+
+## Get Started Contributing
+
+<div style={{ textAlign: 'center', marginTop: '2rem' }}>
+  <LinkButton href="https://github.com/airismlabs/kit/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22" variant="primary">
+    Find Good First Issues
+  </LinkButton>
+  <LinkButton href="https://discord.gg/airism" variant="secondary">
+    Join Our Discord
+  </LinkButton>
+  <LinkButton href="https://github.com/airismlabs" variant="secondary">
+    View All Repositories
+  </LinkButton>
+</div>
+
+**Questions about contributing?** Reach out on [Discord](https://discord.gg/airism) or email us at hello@airism.dev. We're here to help you make your first contribution!

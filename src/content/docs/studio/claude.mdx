@@ -1,6 +1,71 @@
 ---
-title: Claude
-description: A guide in my new Starlight docs site.
+title: Visualizing Claude Data in Studio
+description: Import, explore, and analyze Claude conversations in Studio
 ---
 
-Anthropic
+## Import Options
+
+### Individual Conversations
+Upload `.json` files from specific Claude conversations for focused analysis.
+
+### ZIP Archives
+Import entire Claude exports containing multiple conversations and projects.
+
+### Kit Pre-processing
+Use Kit for enhanced artifact extraction:
+
+```ts
+import { parseClaude } from '@airism/kit'
+const { threads, artifacts } = await parseClaude('export.zip')
+// Upload to Studio with preserved artifacts
+```
+
+## Thread Explorer
+
+Navigate Claude's unique conversation structure:
+- **Project organization**: Group by Claude projects
+- **Artifact timeline**: Track code and document evolution
+- **Branching conversations**: Explore different discussion paths
+- **Context preservation**: Maintain file upload references
+
+## Artifact Management
+
+Studio's specialized Claude features:
+- **Code artifact viewer**: Syntax-highlighted code blocks
+- **Document artifacts**: Rich text and markdown rendering
+- **Version tracking**: See artifact iterations
+- **Cross-reference**: Link artifacts to conversations
+
+## Summary Views
+
+### Conversation Summaries
+- **Topic extraction**: Auto-generated conversation themes
+- **Key insights**: Important conclusions and decisions
+- **Action items**: Extracted tasks and follow-ups
+- **Code outputs**: Collected programming solutions
+
+### Project Insights
+- **Collaboration patterns**: How conversations build on each other
+- **Knowledge accumulation**: Track learning and iteration
+- **Resource usage**: File uploads and references
+
+## Claude-Specific Formatting
+
+Studio handles Claude's unique elements:
+- **Thinking blocks**: Preserved as expandable metadata
+- **Tool usage**: API calls and function executions
+- **Citations**: Maintained reference links
+- **Multi-modal**: Image and file context preservation
+
+## Cross-Platform Analysis
+
+### ChatGPT Integration
+- **Merge conversations**: Combine Claude and ChatGPT sessions
+- **Compare responses**: Side-by-side AI model analysis
+- **Unified search**: Query across both platforms
+- **Style differences**: Highlight AI model characteristics
+
+### Export & Sharing
+- **Unified formats**: Export Claude data in standard formats
+- **Presentation mode**: Create reports combining both AI sources
+- **Team collaboration**: Share insights across platforms

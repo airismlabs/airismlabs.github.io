@@ -1,6 +1,68 @@
 ---
-title: ChatGPT
-description: A guide in my new Starlight docs site.
+title: Visualizing ChatGPT Data in Studio
+description: Import, explore, and analyze ChatGPT conversations in Studio
 ---
 
-OpenAI
+## Import Methods
+
+### Drag-and-Drop
+Simply drag your ChatGPT `.json` export file into Studio. Supports both single conversations and bulk exports.
+
+### Kit Integration
+Pre-process exports with Kit for enhanced metadata:
+
+```ts
+import { parseChatGPT } from '@airism/kit'
+const sessions = await parseChatGPT('export.json')
+// Upload sessions to Studio
+```
+
+## Timeline View
+
+Navigate conversations chronologically:
+- **Daily clusters**: Group sessions by date
+- **Session threads**: Follow conversation flow
+- **Message search**: Find specific exchanges
+- **Context switching**: Track topic changes
+
+## Table View
+
+Structured data exploration:
+- **Filterable columns**: Role, timestamp, length, tokens
+- **Sort and search**: Find patterns across conversations
+- **Export selections**: CSV, Markdown, JSON
+
+## Auto-Tagging Features
+
+Studio automatically identifies:
+- **System prompts**: Custom instructions and roles
+- **Code sessions**: Programming discussions
+- **Long conversations**: Multi-session threads
+- **Topic clusters**: Similar conversation themes
+
+## Session Management
+
+### Linking Sessions
+- Merge related conversations
+- Detect continuation threads
+- Group by project or topic
+
+### Duplicate Detection
+- Identify repeated questions
+- Flag similar responses
+- Clean up redundant sessions
+
+## Export Options
+
+Enhanced data export formats:
+- **CSV**: Spreadsheet analysis
+- **Markdown**: Documentation-ready
+- **JSON**: Further processing
+- **PDF**: Presentation format
+
+## Search & Filter
+
+- **Full-text search** across all messages
+- **Regex patterns** for advanced queries
+- **Date ranges** and time filtering
+- **Role-based** filtering (user/assistant/system)
