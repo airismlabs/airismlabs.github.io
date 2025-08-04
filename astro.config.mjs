@@ -14,8 +14,8 @@ export default defineConfig({
 				backlinks: false,
 				graph: false
 			})],
-			favicon: './src/assets/logo-small.svg',
-			title: 'My Docs',
+			favicon: 'src/assets/logo-small.svg',
+			title: 'Airism',
 			logo: {
 				src: './src/assets/logo-small.svg',
 				replacesTitle: true,
