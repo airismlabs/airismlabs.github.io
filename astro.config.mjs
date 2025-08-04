@@ -14,6 +14,7 @@ export default defineConfig({
 				backlinks: false,
 				graph: false
 			})],
+			favicon: './src/assets/logo-small.svg',
 			title: 'My Docs',
 			logo: {
 				src: './src/assets/logo-small.svg',
@@ -48,4 +49,5 @@ export default defineConfig({
 	vite: {
 		plugins: [Icons({ compiler: 'astro' })],
 	},
+	site: 'https://airismlabs.github.io',
 });
