@@ -28,7 +28,7 @@
 			150rem 30rem;
 }
 
-[data-has-hero] .hero > img {
+/* [data-has-hero] .hero > img {
     filter: 
         drop-shadow(0 0 5rem var(--sl-hero-color))
         drop-shadow(0 0 20px rgba(138, 84, 255, 0.6))
@@ -36,7 +36,7 @@
         drop-shadow(0 0 60px rgba(138, 84, 255, 0.2));
     animation: bob 3s ease-in-out infinite;
     animation-delay: 0.5s;
-}
+} */
 
 /* Logo bobbing animation keyframes */
 @keyframes bob {
